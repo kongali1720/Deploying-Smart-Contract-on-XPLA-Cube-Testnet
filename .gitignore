@@ -1,0 +1,18 @@
+# Rust
+/target/
+**/*.rs.bk
+**/*.rs~ 
+
+# WASM artifacts
+/artifacts/
+
+# Cargo
+/Cargo.lock
+
+# XPLA CLI
+/.xpla/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
