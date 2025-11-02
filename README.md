@@ -116,6 +116,37 @@ graph TD
     A --> F[Cargo.lock]
 ```
 
+```bash
+my_xpla_contract/
+├─ artifacts/
+│  └─ (compiled .wasm file akan masuk sini)
+├─ src/
+│  └─ lib.rs
+├─ examples/
+│  └─ deploy.sh
+├─ Cargo.toml
+├─ Cargo.lock
+├─ README.md
+├─ LICENSE
+├─ CONTRIBUTING.md
+└─ .gitignore
+```
+
+**✅ Langkah Compile & Deploy**
+```bash
+# Masuk folder project
+cd my_xpla_contract
+
+# Compile smart contract
+cargo contract build --release
+
+# Optimize WASM (opsional tapi disarankan)
+wasm-opt -Os target/wasm32-unknown-unknown/release/my_xpla_contract.wasm -o artifacts/my_xpla_contract.wasm
+
+# Deploy
+bash examples/deploy.sh
+```
+
 <div align="center">
 
 ## ✅ Gaspol Coding Squad Indonesia! 🚀💻
